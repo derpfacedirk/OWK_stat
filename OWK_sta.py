@@ -2,7 +2,11 @@ import numpy as np
 import matplotlib
 import os
 
-data = np.zeros(shape=(6,6,1))
+data_points = 0
+for path in os.listdir('data/'):
+	data_points+=1
+
+data = np.zeros(shape=(6,6,data_points))
 
 j = 0
 for file_name in os.listdir('data/'):
@@ -13,9 +17,7 @@ for file_name in os.listdir('data/'):
 			if j == 0:
 				data[l][k][0] = inputs[k]
 			else:
-				pass
-				# np.append(data[l][k], inputs)
-				# data[l][k].append(inputs[k])
+				data[l][k][j] = inputs[k]
 	j += 1
 
 print(data)
