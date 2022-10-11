@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib
 import os
+from Bar_functions import *
 
 data_points = 0
 for path in os.listdir('data/'):
@@ -15,10 +16,11 @@ for file_name in os.listdir('data/'):
 		inputs = line.split(',')
 		for k in range (6):
 			if j == 0:
-				data[l][k][0] = inputs[k]
+				data[l][k][0] = int(inputs[k])
 			else:
-				data[l][k][j] = inputs[k]
+				data[l][k][j] = int(inputs[k])
 	j += 1
 
-print(data)
+#print(data)
+A_bar(data)
 input("Press Enter to close...")

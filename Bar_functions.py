@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def A_bar(ndarray data):
+def A_bar(data):
     
     data_a = data[1]
     bar_data_colour = np.zeros(shape = (6,6))
@@ -11,8 +11,11 @@ def A_bar(ndarray data):
     # i represents colour
     # j represents data number
     for i in range(6):
+        #print(data_a[i])
         for j in data_a[i]:
-            bar_data_colour[i][j]+=1
+            #print(j)
+            #print(type(j))
+            bar_data_colour[i][int(j-1)]+=1
 
     X = np.arange(6)
     fig = plt.figure()
