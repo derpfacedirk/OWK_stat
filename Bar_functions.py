@@ -24,15 +24,14 @@ def occurrence_bar(data, name):
 
 
 def get_occurrence_count(data, column):
-    use_data = data[column]
     to_return = np.zeros(shape=(6, 6))
     # red = 0; orange = 1; yellow = 2; green = 3; blue = 4; purple = 5
 
     # i represents colour
     # j represents data number
-    for i in range(6):
-        # print(data_a[i])
-        for j in use_data[i]:
-            to_return[i][int(j - 1)] += 1
+    for i in range(0, 6):
+        for j in data[i][column]:
+            if j != 0:
+                to_return[i][int(j - 1)] += 1
 
     return to_return

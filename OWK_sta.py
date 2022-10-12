@@ -16,7 +16,8 @@ for file_name in os.listdir('data/'):
 		inputs = line.split(',')
 		for k in range (6):
 			if j == 0:
-				data[l][k][0] = int(inputs[k])
+				data[l
+				][k][0] = int(inputs[k])
 			else:
 				data[l][k][j] = int(inputs[k])
 	j += 1
