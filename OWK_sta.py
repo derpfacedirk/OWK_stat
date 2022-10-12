@@ -21,6 +21,11 @@ for file_name in os.listdir('data/'):
 				data[l][k][j] = int(inputs[k])
 	j += 1
 
-#print(data)
-A_bar(data)
+occurrence_bar(get_occurrence_count(data, 0), "bar_A")
+occurrence_bar(get_occurrence_count(data, 1), "bar_B")
+occurrence_bar(get_occurrence_count(data, 2), "bar_C")
+occurrence_bar(get_occurrence_count(data, 3), "bar_D")
+occurrence_bar(get_occurrence_count(data, 4), "bar_E")
+occurrence_bar(get_occurrence_count(data, 5), "bar_F")
+
 input("Press Enter to close...")
