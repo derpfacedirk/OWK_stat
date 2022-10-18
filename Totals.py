@@ -39,6 +39,9 @@ def plot_averages(data, data_points):
 	y_blue = averages[4]
 	y_purple = averages[5]
 
+	ax.set_xlabel("Ronde")
+	ax.set_ylabel("Gemiddelde score")
+
 	ax.scatter(x, y_red, c="red")
 	ax.scatter(x, y_orange, c="orange")
 	ax.scatter(x, y_yellow, c="yellow")
