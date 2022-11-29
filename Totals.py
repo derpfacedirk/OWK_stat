@@ -22,13 +22,14 @@ def get_averages(data, data_points):
     return to_return
 
 
-def plot_averages(data, data_points):
+def plot_averages(data, path):
+    data_points = len(data[0][0])
     averages = get_averages(data, data_points)
 
     fig = plt.figure()
     ax = fig.add_subplot(111)
     x = [1, 2, 3, 4, 5, 6]
-    ax.set_xticks(np.arange(6)+1,('A', 'B', 'C', 'D', 'E', 'F'))
+    ax.set_xticks(np.arange(6) + 1, ('A', 'B', 'C', 'D', 'E', 'F'))
     y_red = averages[0]
     y_orange = averages[1]
     y_yellow = averages[2]
@@ -43,4 +44,4 @@ def plot_averages(data, data_points):
     ax.scatter(x, y_blue, c="blue")
     ax.scatter(x, y_purple, c="purple")
 
-    plt.savefig('charts/averages.png')
+    plt.savefig('charts/' + path)
